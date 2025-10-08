@@ -3,55 +3,389 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moja pierwsza strona</title>
+    <title>Ekstraliga.top - Legalne transmisje sportowe</title>
+    <meta name="description" content="Gdzie obejrzeć mecze żużla, hokeja i koszykówki? Sprawdź legalne transmisje w Canal+, Viaplay, Polsat i innych.">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
+            background: #f8f9fa;
+            color: #333;
         }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
         header {
-            background: #2c3e50;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .sports-nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .sports-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .sports-nav a:hover {
+            background: #2a5298;
+            color: white;
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 3rem 0;
+        }
+        
+        .welcome-section {
+            text-align: center;
+            margin-bottom: 3rem;
             padding: 2rem;
-            text-align: center;
+            background: white;
             border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        .content {
-            margin: 2rem 0;
+        
+        .welcome-section h2 {
+            color: #2a5298;
+            margin-bottom: 1rem;
         }
-        footer {
+        
+        /* Match Calendar */
+        .calendar-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .calendar-section h2 {
+            color: #2a5298;
+            margin-bottom: 1.5rem;
             text-align: center;
+        }
+        
+        .match-day {
+            margin-bottom: 2rem;
+        }
+        
+        .match-day h3 {
+            background: #f8f9fa;
+            padding: 0.5rem 1rem;
+            border-left: 4px solid #2a5298;
+            margin-bottom: 1rem;
+        }
+        
+        .match {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .match:last-child {
+            border-bottom: none;
+        }
+        
+        .match-teams {
+            flex: 2;
+            font-weight: bold;
+        }
+        
+        .match-time {
+            flex: 1;
+            color: #666;
+        }
+        
+        .match-broadcast {
+            flex: 1;
+            background: #e3f2fd;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        
+        /* Sports Grid */
+        .sports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
             margin-top: 3rem;
-            color: #7f8c8d;
+        }
+        
+        .sport-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .sport-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .sport-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .sport-card h3 {
+            color: #2a5298;
+            margin-bottom: 1rem;
+        }
+        
+        /* Broadcasters */
+        .broadcasters {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-top: 2rem;
+        }
+        
+        .broadcasters h2 {
+            color: #2a5298;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .broadcaster-logos {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .broadcaster {
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        .broadcaster-name {
+            font-weight: bold;
+            margin-top: 0.5rem;
+            color: #333;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2a5298;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sports-nav {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .match {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+            
+            .sports-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <h1>Witaj na mojej stronie! 🚀</h1>
-        <p>To moja pierwsza strona internetowa</p>
+        <div class="container">
+            <div class="logo">🏆 Ekstraliga.top</div>
+            <p class="tagline">Legalne transmisje żużla, hokeja i koszykówki</p>
+        </div>
     </header>
 
-    <div class="content">
-        <h2>O mnie</h2>
-        <p>Cześć! Nazywam się Hubert i tworzę swoją pierwszą stronę internetową.</p>
-        
-        <h2>Moje cele</h2>
-        <ul>
-            <li>Nauczyć się tworzenia stron WWW</li>
-            <li>Zarabiać przez internet</li>
-            <li>Pomagać innym</li>
-        </ul>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul class="sports-nav">
+                <li><a href="#zuzel">Żużel</a></li>
+                <li><a href="#hokej">Hokej</a></li>
+                <li><a href="#koszykowka">Koszykówka</a></li>
+                <li><a href="#transmisje">Transmisje</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <h2>Kontakt</h2>
-        <p>Email: twój@email.com</p>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="main-content">
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <h2>Gdzie legalnie oglądać mecze?</h2>
+                <p>Znajdź transmisje swoich ulubionych drużyn w Canal+, Viaplay, Polsat Box i innych legalnych źródłach.</p>
+            </section>
+
+            <!-- Match Calendar -->
+            <section class="calendar-section">
+                <h2>📅 Nadchodzące mecze</h2>
+                
+                <div class="match-day">
+                    <h3>Poniedziałek, 15 Grudnia</h3>
+                    
+                    <div class="match">
+                        <div class="match-teams">Fogo Unia Leszno vs Motor Lublin</div>
+                        <div class="match-time">18:00</div>
+                        <div class="match-broadcast">Canal+ Sport</div>
+                    </div>
+                    
+                    <div class="match">
+                        <div class="match-teams">GKS Katowice vs KH Sanok</div>
+                        <div class="match-time">19:30</div>
+                        <div class="match-broadcast">Viaplay</div>
+                    </div>
+                    
+                    <div class="match">
+                        <div class="match-teams">Legia Warszawa vs Śląsk Wrocław</div>
+                        <div class="match-time">20:00</div>
+                        <div class="match-broadcast">Polsat Sport</div>
+                    </div>
+                </div>
+                
+                <div class="match-day">
+                    <h3>Wtorek, 16 Grudnia</h3>
+                    
+                    <div class="match">
+                        <div class="match-teams">Stal Gorzów vs Włókniarz Częstochowa</div>
+                        <div class="match-time">17:45</div>
+                        <div class="match-broadcast">Canal+ Sport</div>
+                    </div>
+                    
+                    <div class="match">
+                        <div class="match-teams">Podhale Nowy Targ vs Comarch Cracovia</div>
+                        <div class="match-time">20:15</div>
+                        <div class="match-broadcast">Viaplay</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sports Grid -->
+            <div class="sports-grid">
+                <div class="sport-card" id="zuzel">
+                    <div class="sport-icon">🏍️</div>
+                    <h3>Żużel</h3>
+                    <p>Transmisje Ekstraligi Żużlowej, terminarze, wyniki i gdzie oglądać legalnie.</p>
+                    <a href="#zuzel" style="color: #2a5298; font-weight: bold;">Zobacz mecze →</a>
+                </div>
+                
+                <div class="sport-card" id="hokej">
+                    <div class="sport-icon">🏒</div>
+                    <h3>Hokej</h3>
+                    <p>Polska Hokej Liga, spotkania na żywo, analizy i legalne źródła transmisji.</p>
+                    <a href="#hokej" style="color: #2a5298; font-weight: bold;">Zobacz mecze →</a>
+                </div>
+                
+                <div class="sport-card" id="koszykowka">
+                    <div class="sport-icon">🏀</div>
+                    <h3>Koszykówka</h3>
+                    <p>Energa Basket Liga, europejskie puchary, gdzie oglądać online.</p>
+                    <a href="#koszykowka" style="color: #2a5298; font-weight: bold;">Zobacz mecze →</a>
+                </div>
+            </div>
+
+            <!-- Broadcasters -->
+            <section class="broadcasters">
+                <h2>📺 Legalni nadawcy</h2>
+                <div class="broadcaster-logos">
+                    <div class="broadcaster">
+                        <div style="font-size: 2.5rem;">📡</div>
+                        <div class="broadcaster-name">Canal+</div>
+                    </div>
+                    <div class="broadcaster">
+                        <div style="font-size: 2.5rem;">🎬</div>
+                        <div class="broadcaster-name">Viaplay</div>
+                    </div>
+                    <div class="broadcaster">
+                        <div style="font-size: 2.5rem;">📺</div>
+                        <div class="broadcaster-name">Polsat</div>
+                    </div>
+                    <div class="broadcaster">
+                        <div style="font-size: 2.5rem;">⚡</div>
+                        <div class="broadcaster-name">Eleven</div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
 
+    <!-- Footer -->
     <footer>
-        <p>© 2024 Moja Strona | Wszystkie prawa zastrzeżone</p>
+        <div class="container">
+            <p>Ekstraliga.top - Legalne źródła transmisji sportowych</p>
+            <div class="footer-links">
+                <a href="#o-nas">O nas</a>
+                <a href="#kontakt">Kontakt</a>
+                <a href="#polityka">Polityka prywatności</a>
+            </div>
+            <p>© 2024 Ekstraliga.top. Wszystkie prawa zastrzeżone.</p>
+        </div>
     </footer>
 </body>
 </html>
