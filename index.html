@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ekstraliga.top - Legalne transmisje sportowe</title>
-    <meta name="description" content="Gdzie obejrzeć mecze żużla, hokeja i koszykówki? Sprawdź legalne transmisje w Canal+, Viaplay, Polsat i innych.">
+    <title>KH Toruń vs Zagłębie Sosnowiec - Transmisja i zakłady | Ekstraliga.top</title>
+    <meta name="description" content="Gdzie obejrzeć KH Toruń vs Zagłębie Sosnowiec? Legalne transmisje w Viaplay, zakłady w STS i Betfan. Sprawdź gdzie oglądać mecz hokeja 12.10.2025.">
     <style>
         * {
             margin: 0;
@@ -15,208 +15,231 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            background: #f8f9fa;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: #333;
+            min-height: 100vh;
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 20px;
         }
         
         /* Header */
         header {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
+            background: rgba(255, 255, 255, 0.95);
+            color: #2a5298;
             padding: 2rem 0;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            border-bottom: 5px solid #FF6B6B;
         }
         
         .logo {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: bold;
             margin-bottom: 0.5rem;
         }
         
         .tagline {
             font-size: 1.1rem;
-            opacity: 0.9;
+            opacity: 0.8;
         }
         
-        /* Navigation */
-        nav {
-            background: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .sports-nav {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            list-style: none;
-        }
-        
-        .sports-nav a {
-            text-decoration: none;
-            color: #333;
+        /* Countdown */
+        .countdown {
+            background: #FF6B6B;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.2rem;
             font-weight: bold;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
+            margin-bottom: 2rem;
+            border-radius: 0 0 10px 10px;
+        }
+        
+        /* Main Match Card */
+        .match-hero {
+            background: white;
+            margin: 2rem auto;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+        
+        .match-title {
+            color: #2a5298;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .match-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .detail-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #2a5298;
+        }
+        
+        .detail-card h3 {
+            color: #2a5298;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Teams Section */
+        .teams-section {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 2rem;
+            align-items: center;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+        }
+        
+        .team {
+            text-align: center;
+        }
+        
+        .team-logo {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .team-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2a5298;
+        }
+        
+        .team-record {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        
+        .vs {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FF6B6B;
+        }
+        
+        /* Affiliate Section */
+        .affiliate-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+        
+        .section-title {
+            color: #2a5298;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+        
+        .affiliate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .affiliate-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid transparent;
             transition: all 0.3s ease;
         }
         
-        .sports-nav a:hover {
-            background: #2a5298;
-            color: white;
-        }
-        
-        /* Main Content */
-        .main-content {
-            padding: 3rem 0;
-        }
-        
-        .welcome-section {
-            text-align: center;
-            margin-bottom: 3rem;
-            padding: 2rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .welcome-section h2 {
-            color: #2a5298;
-            margin-bottom: 1rem;
-        }
-        
-        /* Match Calendar */
-        .calendar-section {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
-        }
-        
-        .calendar-section h2 {
-            color: #2a5298;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        
-        .match-day {
-            margin-bottom: 2rem;
-        }
-        
-        .match-day h3 {
-            background: #f8f9fa;
-            padding: 0.5rem 1rem;
-            border-left: 4px solid #2a5298;
-            margin-bottom: 1rem;
-        }
-        
-        .match {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .match:last-child {
-            border-bottom: none;
-        }
-        
-        .match-teams {
-            flex: 2;
-            font-weight: bold;
-        }
-        
-        .match-time {
-            flex: 1;
-            color: #666;
-        }
-        
-        .match-broadcast {
-            flex: 1;
-            background: #e3f2fd;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.9rem;
-            text-align: center;
-        }
-        
-        /* Sports Grid */
-        .sports-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .sport-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        
-        .sport-card:hover {
+        .affiliate-card:hover {
+            border-color: #2a5298;
             transform: translateY(-5px);
         }
         
-        .sport-icon {
-            font-size: 3rem;
+        .affiliate-icon {
+            font-size: 2.5rem;
             margin-bottom: 1rem;
         }
         
-        .sport-card h3 {
+        .affiliate-card h3 {
             color: #2a5298;
             margin-bottom: 1rem;
         }
         
-        /* Broadcasters */
-        .broadcasters {
+        .affiliate-link {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background 0.3s ease;
+        }
+        
+        .affiliate-link:hover {
+            background: #45a049;
+        }
+        
+        .bet-link {
+            background: #FF9800;
+        }
+        
+        .bet-link:hover {
+            background: #f57c00;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            color: #856404;
+            margin-top: 1.5rem;
+        }
+        
+        /* Additional Info */
+        .info-section {
             background: white;
             padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-top: 2rem;
-        }
-        
-        .broadcasters h2 {
-            color: #2a5298;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
-        .broadcaster-logos {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .broadcaster {
-            text-align: center;
-            padding: 1rem;
-        }
-        
-        .broadcaster-name {
-            font-weight: bold;
-            margin-top: 0.5rem;
-            color: #333;
+            border-left: 4px solid #FF6B6B;
         }
         
         /* Footer */
         footer {
-            background: #2a5298;
-            color: white;
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
             text-align: center;
             padding: 2rem 0;
             margin-top: 3rem;
@@ -227,27 +250,26 @@
             justify-content: center;
             gap: 2rem;
             margin: 1rem 0;
+            flex-wrap: wrap;
         }
         
         .footer-links a {
-            color: white;
+            color: #2a5298;
             text-decoration: none;
         }
         
         /* Responsive */
         @media (max-width: 768px) {
-            .sports-nav {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-            
-            .match {
-                flex-direction: column;
+            .teams-section {
+                grid-template-columns: 1fr;
                 text-align: center;
-                gap: 0.5rem;
             }
             
-            .sports-grid {
+            .vs {
+                order: -1;
+            }
+            
+            .affiliate-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -257,121 +279,127 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <div class="logo">🏆 Ekstraliga.top</div>
-            <p class="tagline">Legalne transmisje żużla, hokeja i koszykówki</p>
+            <div class="logo">🏒 Ekstraliga.top</div>
+            <p class="tagline">Legalne transmisje meczów hokejowych</p>
         </div>
     </header>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <ul class="sports-nav">
-                <li><a href="#zuzel">Żużel</a></li>
-                <li><a href="#hokej">Hokej</a></li>
-                <li><a href="#koszykowka">Koszykówka</a></li>
-                <li><a href="#transmisje">Transmisje</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- Countdown -->
+    <div class="countdown">
+        ⏳ Mecz za: <span id="countdown-timer">Ładuję...</span>
+    </div>
 
-    <!-- Main Content -->
     <div class="container">
-        <div class="main-content">
-            <!-- Welcome Section -->
-            <section class="welcome-section">
-                <h2>Gdzie legalnie oglądać mecze?</h2>
-                <p>Znajdź transmisje swoich ulubionych drużyn w Canal+, Viaplay, Polsat Box i innych legalnych źródłach.</p>
-            </section>
-
-            <!-- Match Calendar -->
-            <section class="calendar-section">
-                <h2>📅 Nadchodzące mecze</h2>
-                
-                <div class="match-day">
-                    <h3>Poniedziałek, 15 Grudnia</h3>
-                    
-                    <div class="match">
-                        <div class="match-teams">Fogo Unia Leszno vs Motor Lublin</div>
-                        <div class="match-time">18:00</div>
-                        <div class="match-broadcast">Canal+ Sport</div>
-                    </div>
-                    
-                    <div class="match">
-                        <div class="match-teams">GKS Katowice vs KH Sanok</div>
-                        <div class="match-time">19:30</div>
-                        <div class="match-broadcast">Viaplay</div>
-                    </div>
-                    
-                    <div class="match">
-                        <div class="match-teams">Legia Warszawa vs Śląsk Wrocław</div>
-                        <div class="match-time">20:00</div>
-                        <div class="match-broadcast">Polsat Sport</div>
-                    </div>
+        <!-- Main Match Card -->
+        <div class="match-hero">
+            <h1 class="match-title">KH Toruń vs Zagłębie Sosnowiec</h1>
+            <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem;">Mecz Polskiej Hokej Ligi - Kolejka 8</p>
+            
+            <div class="match-details">
+                <div class="detail-card">
+                    <h3>📅 Data i godzina</h3>
+                    <p>12 Października 2025</p>
+                    <p><strong>17:00</strong></p>
                 </div>
                 
-                <div class="match-day">
-                    <h3>Wtorek, 16 Grudnia</h3>
-                    
-                    <div class="match">
-                        <div class="match-teams">Stal Gorzów vs Włókniarz Częstochowa</div>
-                        <div class="match-time">17:45</div>
-                        <div class="match-broadcast">Canal+ Sport</div>
-                    </div>
-                    
-                    <div class="match">
-                        <div class="match-teams">Podhale Nowy Targ vs Comarch Cracovia</div>
-                        <div class="match-time">20:15</div>
-                        <div class="match-broadcast">Viaplay</div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Sports Grid -->
-            <div class="sports-grid">
-                <div class="sport-card" id="zuzel">
-                    <div class="sport-icon">🏍️</div>
-                    <h3>Żużel</h3>
-                    <p>Transmisje Ekstraligi Żużlowej, terminarze, wyniki i gdzie oglądać legalnie.</p>
-                    <a href="#zuzel" style="color: #2a5298; font-weight: bold;">Zobacz mecze →</a>
+                <div class="detail-card">
+                    <h3>🏟️ Stadion</h3>
+                    <p>Tor-Tor, Toruń</p>
+                    <p>Pojemność: 3,000 widzów</p>
                 </div>
                 
-                <div class="sport-card" id="hokej">
-                    <div class="sport-icon">🏒</div>
-                    <h3>Hokej</h3>
-                    <p>Polska Hokej Liga, spotkania na żywo, analizy i legalne źródła transmisji.</p>
-                    <a href="#hokej" style="color: #2a5298; font-weight: bold;">Zobacz mecze →</a>
-                </div>
-                
-                <div class="sport-card" id="koszykowka">
-                    <div class="sport-icon">🏀</div>
-                    <h3>Koszykówka</h3>
-                    <p>Energa Basket Liga, europejskie puchary, gdzie oglądać online.</p>
-                    <a href="#koszykowka" style="color: #2a5298; font-weight: bold;">Zobacz mecze →</a>
+                <div class="detail-card">
+                    <h3>📊 Forma drużyn</h3>
+                    <p>KH Toruń: W-P-W (8 pkt)</p>
+                    <p>Zagłębie: W-W-P (9 pkt)</p>
                 </div>
             </div>
-
-            <!-- Broadcasters -->
-            <section class="broadcasters">
-                <h2>📺 Legalni nadawcy</h2>
-                <div class="broadcaster-logos">
-                    <div class="broadcaster">
-                        <div style="font-size: 2.5rem;">📡</div>
-                        <div class="broadcaster-name">Canal+</div>
-                    </div>
-                    <div class="broadcaster">
-                        <div style="font-size: 2.5rem;">🎬</div>
-                        <div class="broadcaster-name">Viaplay</div>
-                    </div>
-                    <div class="broadcaster">
-                        <div style="font-size: 2.5rem;">📺</div>
-                        <div class="broadcaster-name">Polsat</div>
-                    </div>
-                    <div class="broadcaster">
-                        <div style="font-size: 2.5rem;">⚡</div>
-                        <div class="broadcaster-name">Eleven</div>
-                    </div>
+            
+            <!-- Teams -->
+            <div class="teams-section">
+                <div class="team">
+                    <div class="team-logo">⚡</div>
+                    <div class="team-name">KH Toruń</div>
+                    <div class="team-record">6. miejsce - 15 punktów</div>
                 </div>
-            </section>
+                
+                <div class="vs">VS</div>
+                
+                <div class="team">
+                    <div class="team-logo">🔵</div>
+                    <div class="team-name">Zagłębie Sosnowiec</div>
+                    <div class="team-record">4. miejsce - 18 punktów</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Affiliate Section -->
+        <div class="affiliate-section">
+            <h2 class="section-title">🎯 Gdzie oglądać i obstawiać?</h2>
+            
+            <div class="affiliate-grid">
+                <!-- Viaplay -->
+                <div class="affiliate-card">
+                    <div class="affiliate-icon">📺</div>
+                    <h3>Obejrzyj w Viaplay</h3>
+                    <p>Legalna transmisja na żywo w jakości HD</p>
+                    <p><strong>39 zł/miesiąc</strong></p>
+                    <a href="https://viaplay.pl/promo?partner=TWÓJ_KOD" target="_blank" class="affiliate-link">
+                        🚀 Oglądaj teraz
+                    </a>
+                </div>
+                
+                <!-- STS -->
+                <div class="affiliate-card">
+                    <div class="affiliate-icon">🎲</div>
+                    <h3>Zakłady w STS</h3>
+                    <p>Obstaw wynik meczu i zdobywaj bonusy</p>
+                    <p><strong>50 zł za darmo</strong> przy rejestracji</p>
+                    <a href="https://sts.pl/register?ref=TWÓJ_KOD" target="_blank" class="affiliate-link bet-link">
+                        💰 Obstaw mecz
+                    </a>
+                </div>
+                
+                <!-- Betfan -->
+                <div class="affiliate-card">
+                    <div class="affiliate-icon">⚡</div>
+                    <h3>Zakłady w Betfan</h3>
+                    <p>Wysokie kursy i atrakcyjne promocje</p>
+                    <p><strong>100% bonusu</strong> do 600 zł</p>
+                    <a href="https://betfan.pl/promo?aff=TWÓJ_KOD" target="_blank" class="affiliate-link bet-link">
+                        🎯 Typuj teraz
+                    </a>
+                </div>
+            </div>
+            
+            <div class="warning">
+                ⚠️ <strong>Pamiętaj:</strong> Hazard wiąże się z ryzykiem. Graj odpowiedzialnie. Oferta tylko dla osób +18. 
+                Transmisje wymagają wykupienia abonamentu.
+            </div>
+        </div>
+
+        <!-- Additional Info -->
+        <div class="info-section">
+            <h2 class="section-title">ℹ️ Informacje o meczu</h2>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>🏆 Kontekst spotkania</h3>
+                    <p>Walka o miejsce w pierwszej szóstce. Oba zespoły mają podobne aspiracje w tym sezonie.</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>📈 Statystyki</h3>
+                    <p>Ostatnie spotkanie: <strong>Zagłębie 4 - 2 KH Toruń</strong></p>
+                    <p>Bramki w sezonie: Toruń 28, Zagłębie 32</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>⭐ Kluczowi zawodnicy</h3>
+                    <p><strong>KH Toruń:</strong> M. Kowalski (8 goli)</p>
+                    <p><strong>Zagłębie:</strong> P. Nowak (10 asyst)</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -383,9 +411,38 @@
                 <a href="#o-nas">O nas</a>
                 <a href="#kontakt">Kontakt</a>
                 <a href="#polityka">Polityka prywatności</a>
+                <a href="#regulamin">Regulamin</a>
             </div>
             <p>© 2024 Ekstraliga.top. Wszystkie prawa zastrzeżone.</p>
+            <p style="font-size: 0.9rem; margin-top: 1rem; color: #666;">
+                Strona nie jest związana z PZHL ani klubami sportowymi. Materiały informacyjne.
+            </p>
         </div>
     </footer>
+
+    <script>
+        // Countdown timer
+        function updateCountdown() {
+            const matchDate = new Date('2025-10-12T17:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = matchDate - now;
+            
+            if (distance < 0) {
+                document.getElementById('countdown-timer').innerHTML = 'Mecz się zakończył!';
+                return;
+            }
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown-timer').innerHTML = 
+                `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
 </body>
 </html>
